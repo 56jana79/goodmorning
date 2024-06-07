@@ -1,0 +1,47 @@
+<style>
+ h1{
+ color: orange; 
+ size: 50cm;
+} 
+input{
+   size: 50cm;
+}
+#la{
+ background-color: rgb(14, 70, 255);
+
+}
+#ol{
+   background-color: red;
+
+}
+#ok{
+   background-color: red;
+} 
+form{
+   background-color: rgb(13, 223, 243);
+}
+</style> 
+
+<h1 >TO-DO List</h1>
+<input id="element"> 
+<button onclick="add()" id="la">click</button>
+<ul id="listitem"> 
+     <li>Hello
+        <button onclick="deleteItem(event)" id="ol" >DELETE</button>
+     </li>
+
+</ul>
+<script> 
+     var item=document.getElementById("listitem")
+     var idea =document.getElementById("element")
+     function add(){
+        var a = document.createElement("li")
+        a.innerHTML=idea.value +" "+"<button onclick='deleteItem(event)' id='ok'>Delete</button>"
+        item.append(a)
+     }
+ function deleteItem(event){
+ event.target.parentElement.remove()
+ }
+
+  
+</script>
